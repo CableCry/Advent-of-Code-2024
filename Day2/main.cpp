@@ -58,7 +58,6 @@ private:
     }
 
 public:
-    // Read file and process each line
     void readFileAndParse(const string& filename) {
         ifstream file(filename);
         string line;
@@ -71,7 +70,6 @@ public:
         }
 
         while (getline(file, line)) {
-            // Skip empty lines
             if (line.empty()) continue;
 
             vector<int> row = parseLine(line);
